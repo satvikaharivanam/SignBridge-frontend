@@ -14,7 +14,7 @@ class ASLInferenceService {
     try {
       final response = await http
           .get(Uri.parse('$kServerUrl/health'))
-          .timeout(const Duration(seconds: 5));
+          .timeout(const Duration(seconds: 15));
       if (response.statusCode == 200) {
         print('✅ Flask server connected');
       }
@@ -44,7 +44,7 @@ class ASLInferenceService {
         filename: 'frame.jpg',
       ));
 
-      final streamed  = await request.send().timeout(const Duration(seconds: 6));
+      final streamed  = await request.send().timeout(const Duration(seconds: 10));
       final body      = await streamed.stream.bytesToString();
       final jsonData  = jsonDecode(body);
 

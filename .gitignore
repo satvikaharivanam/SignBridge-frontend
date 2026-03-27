@@ -6,3 +6,10 @@ ios/Pods/
 ios/.symlinks/
 macos/Flutter/ephemeral/
 *.log
+linux/
+macos/
+windows/
+web/
+test/
+.metadata
+analysis_options.yaml
