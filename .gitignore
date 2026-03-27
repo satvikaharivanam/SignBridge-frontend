@@ -1,0 +1,8 @@
+.DS_Store
+build/
+.dart_tool/
+.idea/
+ios/Pods/
+ios/.symlinks/
+macos/Flutter/ephemeral/
+*.log
