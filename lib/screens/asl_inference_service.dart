@@ -4,7 +4,7 @@ import 'package:image/image.dart' as img;
 
 /// TODO: Change this to your Mac's local IP
 /// Find it by running in terminal: ipconfig getifaddr en0
-const String kServerUrl = 'http://192.168.1.48:8765';
+const String kServerUrl = 'https://signbridge-backend-byro.onrender.com';
 
 class ASLInferenceService {
   bool _isInitialized = false;
@@ -44,7 +44,7 @@ class ASLInferenceService {
         filename: 'frame.jpg',
       ));
 
-      final streamed  = await request.send().timeout(const Duration(seconds: 3));
+      final streamed  = await request.send().timeout(const Duration(seconds: 6));
       final body      = await streamed.stream.bytesToString();
       final jsonData  = jsonDecode(body);
 
